@@ -1,0 +1,7 @@
+functions:
+  webhook:
+    type: webhook
+    handler:
+      code: src/webhooks/webhook/handler.js
+    path: "items/{id}"
+    method: PUT
