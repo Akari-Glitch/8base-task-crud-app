@@ -1,7 +1,7 @@
 import { Route, Switch } from 'react-router-dom';
 
 /* Import Components */
-import { NavBar, ProtectedRoute } from 'components';
+import { NavBar } from 'components';
 
 /* Import Route Components */
 import { Home } from './home';

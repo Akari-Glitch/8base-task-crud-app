@@ -1,15 +1,10 @@
 import { Checkbox } from '@material-ui/core';
 import TaskEdit from './TaskEdit';
-import { CHECKED_TASK_MUTATION } from '../../shared/graphql';
-import { useMutation } from '@apollo/client';
 
 function TaskCard({ items, refetch, loading }) {
-  const [checkedTask] = useMutation(CHECKED_TASK_MUTATION);
-
   const handleToggle = async (id, completed) => {
     const UPDATE_COMPLETED_TASK_WEBHOOK_API_ENDPOINT = `https://api.8base.com/ckxmiydpu00bd09l14ivagjx5/webhook/items/${id}`;
 
-    console.log('hola');
     await fetch(UPDATE_COMPLETED_TASK_WEBHOOK_API_ENDPOINT, {
       method: 'PUT',
       body: JSON.stringify({ completed: !completed }),
