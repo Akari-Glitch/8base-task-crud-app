@@ -4,6 +4,8 @@ import { useQuery } from '@apollo/client';
 import { HalfCircleSpinner } from 'react-epic-spinners';
 import { GET_TASK_DATA } from '../../shared/graphql';
 function TaskContain() {
+  //Este componente contiene las tasks
+
   const TaskListQuery = () => {
     const { loading, error, data, refetch } = useQuery(GET_TASK_DATA);
     if (loading)

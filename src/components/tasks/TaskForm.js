@@ -21,6 +21,7 @@ function TaskForm({ taskCreate, refetch }) {
   };
 
   const isStepComplete = (step) => {
+    //la expresion "!!" convierte el valor en booleano. Para mas informacion, puede revisar: https://mircastweb.com/blog/doble-negacion-java-script/
     switch (step) {
       case 1:
         return !!task.title;

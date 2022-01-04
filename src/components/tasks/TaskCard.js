@@ -2,6 +2,7 @@ import { Checkbox } from '@material-ui/core';
 import TaskEdit from './TaskEdit';
 
 function TaskCard({ items, refetch, loading }) {
+  //este componente genera una "task card" que estarå en el tasks contain
   const handleToggle = async (id, completed) => {
     const UPDATE_COMPLETED_TASK_WEBHOOK_API_ENDPOINT = `https://api.8base.com/ckxmiydpu00bd09l14ivagjx5/webhook/items/${id}`;
 
